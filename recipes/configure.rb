@@ -9,9 +9,9 @@ template "/etc/redis/redis.conf" do
     owner "redis"
     mode 0644
     variables ({
-        :savepath => node[:app_frontend][:redis][:savepath],
-		:password => node[:app_frontend][:redis][:password],
-		:maxmemory => node[:app_frontend][:redis][:maxmemory]
+        :savepath => node[:raven_redis][:redis][:savepath],
+		:password => node[:raven_redis][:redis][:password],
+		:maxmemory => node[:raven_redis][:redis][:maxmemory]
     })
 end
 
@@ -29,6 +29,6 @@ file "/var/log/redis.log" do
 	owner "redis"
 end
 
-directory node[:app_frontend][:redis][:savepath] do
+directory node[:raven_redis][:redis][:savepath] do
 	owner "redis"
 end
