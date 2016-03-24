@@ -31,6 +31,6 @@ attribute "raven_redis/redis/savepath",
 attribute "raven_redis/redis/password",
     :display_name => "Redis Password",
     :description => "Redis Password",
-    :required => "recommended",
+    :required => "optional",
     :type => "string",
     :recipes => ["raven-redis::default","raven-redis::configure"]
