@@ -4,7 +4,7 @@ user "redis" do
 	shell "/bin/false"
 end
 
-template "/etc/redis/redis.conf" do
+template "/etc/redis.conf" do
     source "redis.conf.erb"
     owner "redis"
     mode 0644
