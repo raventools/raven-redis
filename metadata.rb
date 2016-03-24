@@ -8,6 +8,10 @@ version          '0.1.0'
 
 depends "raven-deploy"
 
+recipe "raven-redis::default", "install and configure redis"
+recipe "raven-redis::install", "install redis"
+recipe "raven-redis::configure", "configure redis"
+
 attribute "raven-redis",
     :display_name => "Raven Redis",
     :type => "hash"
